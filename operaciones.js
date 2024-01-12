@@ -18,6 +18,7 @@ export async function leer() {
     }
     catch (error) {
         console.log(error);
+        await writeFile("./citas.json", JSON.stringify([]));
         return [];
     }
 }
